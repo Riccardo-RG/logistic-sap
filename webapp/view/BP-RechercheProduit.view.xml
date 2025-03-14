@@ -28,6 +28,9 @@
                             <Column width="5em" hAlign="Center">
                                 <Text text="{i18n>bpRechercheColumnCode}"/>
                             </Column>
+                            <Column width="5em" hAlign="Center">
+                                <Text text="{i18n>bpRechercheColumnQuantity}"/>
+                            </Column>
                             <Column width="15em">
                                 <Text text="{i18n>bpRechercheColumnLabel}"/>
                             </Column>
@@ -38,6 +41,7 @@
                                 <cells>
                                     <Label text="✔" visible="{BPData>pr}" class="sapUiAlignCenter"/>
                                     <Text text="{BPData>MaterialCode}" class="sapUiAlignCenter"/>
+                                    <Text text="{BPData>DeliveryQt}" class="sapUiAlignCenter"/>
                                     <Text text="{BPData>MaterialDescription}"/>
                                 </cells>
                             </ColumnListItem>
