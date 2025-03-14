@@ -1,0 +1,60 @@
+<mvc:View controllerName="logistic-flow.controller.AjustementDesQuantitès"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <Page title="{i18n>ajustementTitle}" showNavButton="true" navButtonPress="onNavBack">
+        <content>
+            <Panel class="bpPanel">
+                <core:Fragment fragmentName="logistic-flow.fragment.IconTabBar" type="XML"/>
+
+                <VBox>
+                    <Title text="{i18n>ajustementSaisie}" level="H2" class="sapUiSmallMarginTop"/>
+                    <FlexBox direction="Column" class="borderedBox" alignItems="Stretch" justifyContent="Start">
+                        <HBox alignItems="Center" class="sapUiSmallMarginBottom">
+                            <Label text="{i18n>ajustementProduit}" width="150px" class="boldLabel"/>
+                            <Text text="{model>/Produit}"/>
+                        </HBox>
+                        <HBox alignItems="Center" class="sapUiSmallMarginBottom">
+                            <Label text="{i18n>ajustementLiner}" width="150px" class="boldLabel"/>
+                            <Text text="{model>/Liner}"/>
+                        </HBox>
+                        <HBox alignItems="Center" class="sapUiSmallMarginBottom">
+                            <Label text="{i18n>ajustementUC}" width="150px" class="boldLabel"/>
+                            <Text text="{model>/UC}"/>
+                        </HBox>
+                        <HBox alignItems="Center" class="sapUiSmallMarginBottom">
+                            <Label text="{i18n>ajustementQtePreparer}" width="150px" class="boldLabel"/>
+                            <Text text="{model>/QtePreparer}"/>
+                        </HBox>
+                        <HBox alignItems="Center" class="sapUiSmallMarginBottom">
+                            <Label text="{i18n>ajustementQteDejaPreparer}" width="150px" class="boldLabel"/>
+                            <Text text="{model>/QteDejaPreparer}"/>
+                        </HBox>
+                        <HBox alignItems="Center" class="sapUiSmallMarginBottom">
+                            <Label text="{i18n>ajustementQuantite}" width="150px" class="boldLabel"/>
+                            <Input id="inputQuantite" value="{model>/Quantite}" width="60%"/>
+                        </HBox>
+                        <HBox alignItems="Center" class="sapUiSmallMarginBottom">
+                            <Label text="{i18n>ajustementLotPropose}" width="150px" class="boldLabel"/>
+                            <Input id="inputLotPropose" value="{model>/LotPropose}" width="60%"/>
+                        </HBox>
+                        <HBox alignItems="Center" class="sapUiSmallMarginBottom">
+                            <Label text="{i18n>ajustementQteDuLot}" width="150px" class="boldLabel"/>
+                            <Input id="inputQteDuLot" value="{model>/QteDuLot}" width="60%"/>
+                        </HBox>
+                        <HBox alignItems="Center" class="sapUiSmallMarginBottom">
+                            <Label text="{i18n>ajustementLot}" width="150px" class="boldLabel"/>
+                            <Input id="inputLot" value="{model>/Lot}" width="60%"/>
+                        </HBox>
+                        <HBox alignItems="Center" class="sapUiSmallMarginBottom">
+                            <Label text="{i18n>ajustementNbCollis}" width="100px" class="boldLabel"/>
+                            <Input id="inputNbCollis" value="{model>/NbCollis}" width="30%"/>
+                            <Label text="{i18n>ajustementNbBP}" width="100px" class="boldLabel"/>
+                            <Input id="inputNbBP" value="{model>/NbBP}" width="30%"/>
+                        </HBox>
+                    </FlexBox>
+                </VBox>
+            </Panel>
+        </content>
+    </Page>
+</mvc:View>

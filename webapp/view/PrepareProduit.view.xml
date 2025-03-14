@@ -1,0 +1,44 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core" controllerName="logistic-flow.controller.PrepareProduit">
+
+    <Page title="{i18n>prepareProduitTitle}" showNavButton="true" navButtonPress="onNavBack">
+        <content>
+            <Panel class="bpPanel">
+                <core:Fragment fragmentName="logistic-flow.fragment.IconTabBar" type="XML"/>
+
+                <VBox>
+                    <Title text="{i18n>prepareProduitRecherche}" level="H2" class="sapUiSmallMarginTop"/>
+
+                    <FlexBox direction="Column" class="borderedBox" alignItems="Stretch" justifyContent="Start">
+                        <FlexBox direction="Row" justifyContent="SpaceBetween" alignItems="Center" class="sapUiSmallMarginBottom">
+                            <Text text="{i18n>prepareProduitCode}" class="boldLabel"/>
+                            <Text text="{i18n>prepareProduitLibelle}" />
+                        </FlexBox>
+
+                        <FlexBox direction="Row" alignItems="Center" justifyContent="Start" class="sapUiSmallMarginBottom">
+                            <Text text="{i18n>prepareProduitTextProduit}" class="sapUiSmallMarginEnd boldLabel"/>
+                            <Input id="productInputCode" width="90%" liveChange="onInputChange" type="Number"/>
+                        </FlexBox>
+
+                        <FlexBox justifyContent="Center">
+                            <Button id="nextButtonBatch" text="{i18n>prepareProduitSuivant}" press="onSuivantPress" type="Emphasized" enabled="false"/>
+                        </FlexBox>
+                    </FlexBox>
+
+                    <Title text="{i18n>prepareProduitInfos}" level="H2" class="sapUiSmallMarginTop"/>
+                    <FlexBox direction="Column" class="borderedBox" alignItems="Stretch" justifyContent="Start">
+                        <FlexBox direction="Column" alignItems="Start">
+                            <Text text="{i18n>prepareProduitInfo1}" class="sapUiSmallMarginBottom"/>
+                            <Text text="{i18n>prepareProduitInfo2}" class="sapUiSmallMarginBottom"/>
+                            <Text text="{i18n>prepareProduitInfo3}" class="sapUiSmallMarginBottom"/>
+                            <Text text="{i18n>prepareProduitInfo4}" class="sapUiSmallMarginBottom"/>
+                            <Text text="{i18n>prepareProduitInfo5}" class="sapUiSmallMarginBottom"/>
+                            <Text text="{i18n>prepareProduitInfo6}" class="sapUiSmallMarginBottom"/>
+                        </FlexBox>
+                    </FlexBox>
+                </VBox>
+            </Panel>
+        </content>
+    </Page>
+</mvc:View>

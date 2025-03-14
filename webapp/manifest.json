@@ -1,0 +1,131 @@
+{
+  "_version": "1.12.0",
+  "sap.app": {
+    "id": "logistic-flow",
+    "type": "application",
+    "applicationVersion": {
+      "version": "0.0.1"
+    }
+  },
+  "sap.ui5": {
+    "dependencies": {
+      "minUI5Version": "1.96.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {}
+      }
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "logistic-flow.i18n.i18n"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "logistic-flow.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "app"
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "logistic-flow.view",
+        "controlId": "app",
+        "controlAggregation": "pages",
+        "async": true
+      },
+      "routes": [
+        { "pattern": "MainView", "name": "MainView", "target": "MainView" },
+        {
+          "pattern": "BP-Preparation",
+          "name": "BP-Preparation",
+          "target": "BP-Preparation"
+        },
+        {
+          "pattern": "BP-RechercheProduit/{IdDelivery}",
+          "name": "BP-RechercheProduit",
+          "target": "BP-RechercheProduit"
+        },
+        { "pattern": "BP-DoJour", "name": "BP-DoJour", "target": "BP-DoJour" },
+        {
+          "pattern": "DetailDuClient",
+          "name": "DetailDuClient",
+          "target": "DetailDuClient"
+        },
+        {
+          "pattern": "PrepareProduit/{IdDelivery}",
+          "name": "PrepareProduit",
+          "target": "PrepareProduit"
+        },
+        { "pattern": "Batch/{IdDelivery}", "name": "Batch", "target": "Batch" },
+        { "pattern": "Manage", "name": "Manage", "target": "Manage" },
+        {
+          "pattern": "InformationsProduit",
+          "name": "InformationsProduit",
+          "target": "InformationsProduit"
+        }
+      ],
+      "targets": {
+        "MainView": {
+          "viewName": "MainView",
+          "viewType": "XML",
+          "controlId": "app",
+          "controlAggregation": "pages"
+        },
+        "BP-Preparation": {
+          "viewName": "BP-Preparation",
+          "viewType": "XML",
+          "controlId": "app",
+          "controlAggregation": "pages"
+        },
+        "BP-RechercheProduit": {
+          "viewName": "BP-RechercheProduit",
+          "viewType": "XML",
+          "controlId": "app",
+          "controlAggregation": "pages"
+        },
+        "BP-DoJour": {
+          "viewName": "BP-DoJour",
+          "viewType": "XML",
+          "controlId": "app",
+          "controlAggregation": "pages"
+        },
+        "DetailDuClient": {
+          "viewName": "DetailDuClient",
+          "viewType": "XML",
+          "controlId": "app",
+          "controlAggregation": "pages"
+        },
+        "PrepareProduit": {
+          "viewName": "PrepareProduit",
+          "viewType": "XML",
+          "controlId": "app",
+          "controlAggregation": "pages"
+        },
+        "Batch": {
+          "viewName": "Batch",
+          "viewType": "XML",
+          "controlId": "app",
+          "controlAggregation": "pages"
+        },
+        "Manage": {
+          "viewName": "HandlingUnitManagement",
+          "viewType": "XML",
+          "controlId": "app",
+          "controlAggregation": "pages"
+        },
+        "InformationsProduit": {
+          "viewName": "InformationsProduit",
+          "viewType": "XML",
+          "controlId": "app",
+          "controlAggregation": "pages"
+        }
+      }
+    }
+  }
+}

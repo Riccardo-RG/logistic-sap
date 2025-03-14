@@ -1,0 +1,35 @@
+<mvc:View controllerName="logistic-flow.controller.DetailDuClient"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:layout="sap.ui.layout.form" displayBlock="true">
+
+  <Page title="{i18n>detailDuClientTitle}" class="bpPreparationPage" showNavButton="true" navButtonPress=".onNavBack" enableScrolling="false">
+    <content>
+      <Panel>
+        <layout:SimpleForm id="simpleFormDetailDuClient" editable="false" layout="ResponsiveGridLayout" class="sapUiSmallMarginTop">
+
+          <VBox class="fieldPair">
+            <Label text="{i18n>detailDuClientLiner}" class="boldLabel" />
+            <Text id="textLiner" text="OUI" class="sapUiSmallMarginBottom sapUiSmallMarginTop"/>
+          </VBox>
+
+          <VBox class="fieldPair">
+            <Label text="{i18n>detailDuClientSansDlu}" class="boldLabel" />
+            <Text id="textSansDlu" text=" - " class="sapUiSmallMarginBottom sapUiSmallMarginTop"/>
+          </VBox>
+
+          <VBox class="fieldPair">
+            <Label text="{i18n>detailDuClientListeDeColisage}" class="boldLabel" />
+            <Text id="textListeDeColisage" text="OUI" class="sapUiSmallMarginBottom sapUiSmallMarginTop"/>
+          </VBox>
+
+          <VBox class="fieldPair sapUiMediumMarginTop">
+            <Label text="{i18n>detailDuClientCommentaires}" class="boldLabel sapUiSmallMarginBottom"/>
+            <TextArea id="textareaCommentaires" rows="10" width="100%" class="boldLabel" editable="false" value="{i18n>detailDuClientCommentairesValue}" />
+          </VBox>
+
+        </layout:SimpleForm>
+      </Panel>
+    </content>
+  </Page>
+</mvc:View>

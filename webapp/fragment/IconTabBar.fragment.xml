@@ -1,0 +1,10 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <IconTabBar id="globalIconTabBar" class="customIconTabBar" selectedKey="tab1" expandSelectList="true" select="onGlobalTabSelect" style="height: 32px; min-height: 32px; line-height: 32px; overflow: hidden;">
+        <items>
+            <IconTabFilter key="tab1" icon="sap-icon://begin" />
+            <IconTabFilter key="tab2" icon="sap-icon://step" />
+            <IconTabFilter key="tab3" icon="sap-icon://print" />
+        </items>
+    </IconTabBar>
+</core:FragmentDefinition>

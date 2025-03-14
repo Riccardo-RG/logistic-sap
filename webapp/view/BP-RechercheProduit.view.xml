@@ -1,0 +1,55 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core" controllerName="logistic-flow.controller.BP-RechercheProduit">
+
+    <Page title="{i18n>bpRechercheTitle}" showNavButton="true" navButtonPress="onNavBack" enableScrolling="false">
+        <content>
+            <Panel class="bpPanel">
+                <VBox>
+                    <FlexBox direction="Row" justifyContent="SpaceBetween" alignItems="Center" class="sapUiSmallMarginBottom">
+                        <RadioButtonGroup id="filterOption" select="onSelectionChange" columns="2">
+                            <buttons>
+                                <RadioButton text="{i18n>bpRechercheRadioCode}" selected="true"/>
+                                <RadioButton text="{i18n>bpRechercheRadioLabel}"/>
+                            </buttons>
+                        </RadioButtonGroup>
+                        <Button text="{i18n>bpRechercheNextButton}" press="onAdvance" type="Emphasized"/>
+                    </FlexBox>
+
+                    <!-- Input con binding dinamico del placeholder -->
+                    <Input id="bpSearchFieldProduit" width="100%" placeholder="{BPData>/searchPlaceholder}" liveChange="onSearch" type="Text"/>
+
+                    <Table id="bpTableProduit" items="{BPData>/BPRechercheData}" class="borderedTable scrollableTable sapUiSmallMarginTop">
+
+                        <columns>
+                            <Column width="3em" hAlign="Center">
+                                <Text text="{i18n>bpRechercheColumnPr}"/>
+                            </Column>
+                            <Column width="5em" hAlign="Center">
+                                <Text text="{i18n>bpRechercheColumnCode}"/>
+                            </Column>
+                            <Column width="15em">
+                                <Text text="{i18n>bpRechercheColumnLabel}"/>
+                            </Column>
+                        </columns>
+
+                        <items>
+                            <ColumnListItem type="Active" press="onRowSelect">
+                                <cells>
+                                    <Label text="✔" visible="{BPData>pr}" class="sapUiAlignCenter"/>
+                                    <Text text="{BPData>MaterialCode}" class="sapUiAlignCenter"/>
+                                    <Text text="{BPData>MaterialDescription}"/>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+
+                    <HBox class="buttonContainerWithGap" width="100%" justifyContent="Center" alignItems="Center">
+                        <Button text="{i18n>bpRechercheCancelButton}" type="Default" press="onCancel" class="bigButton annulerButton"/>
+                        <Button text="{i18n>bpRechercheValidateButton}" type="Emphasized" press="onValidate" class="bigButton validerButton"/>
+                    </HBox>
+                </VBox>
+            </Panel>
+        </content>
+    </Page>
+</mvc:View>

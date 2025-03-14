@@ -1,0 +1,133 @@
+<mvc:View controllerName="logistic-flow.controller.HandlingUnitManagement"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <Page title="{i18n>handlingUnitTitle}" showNavButton="true" navButtonPress="onNavBack" class="bpPreparationPage">
+        <content>
+            <Panel class="bpPanel">
+                <ScrollContainer width="100%" horizontal="true" vertical="false">
+                    <Table id="idHandlingUnitTable" width="900px" growing="true" growingScrollToLoad="true" sticky="ColumnHeaders" items="{modelName>/Produits}">
+
+                        <headerToolbar>
+                            <Toolbar>
+                                <Title text="{i18n>handlingUnitSaisie}" level="H2"/>
+                                <ToolbarSpacer/>
+                                <Button text="{i18n>handlingUnitRefresh}" press="onRefresh" icon="sap-icon://refresh"/>
+                            </Toolbar>
+                        </headerToolbar>
+
+                        <columns>
+                            <Column>
+                                <Text text="{i18n>handlingUnitProduit}"/>
+                            </Column>
+                            <Column>
+                                <Text text="{i18n>handlingUnitPalette}"/>
+                            </Column>
+                            <Column>
+                                <Text text="{i18n>handlingUnitBox}"/>
+                            </Column>
+                            <Column>
+                                <Text text="{i18n>handlingUnitNombre}"/>
+                            </Column>
+                            <Column>
+                                <Text text="{i18n>handlingUnitCondi}"/>
+                            </Column>
+                            <Column>
+                                <Text text="{i18n>handlingUnitQte}"/>
+                            </Column>
+                        </columns>
+
+                        <items>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="{modelName>Produit}" />
+
+                                    <HBox>
+                                        <Text text="{modelName>DisplayPalette}" visible="{modelName>PaletteVisible}"/>
+                                        <Button icon="sap-icon://add" press="onOpenSelectionDialog" visible="{modelName>PaletteButtonVisible}">
+                                            <customData>
+                                                <core:CustomData key="property" value="Palette"/>
+                                            </customData>
+                                        </Button>
+                                    </HBox>
+
+                                    <HBox>
+                                        <Text text="{modelName>Box}" visible="{modelName>BoxVisible}"/>
+                                        <Button icon="sap-icon://add" press="onOpenSelectionDialog" visible="{modelName>BoxButtonVisible}">
+                                            <customData>
+                                                <core:CustomData key="property" value="Box"/>
+                                            </customData>
+                                        </Button>
+                                    </HBox>
+
+                                    <Text text="{modelName>Nombre}" />
+                                    <Text text="{modelName>Condi}" />
+                                    <Text text="{modelName>Qte}" />
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </ScrollContainer>
+
+                <VBox alignItems="Center" class="deleteButtonContainer sapUiSmallMarginTop">
+                    <Button id="idManagePalletteButton" text="{i18n>handlingUnitManagePalette}" press="onOpenManagePalletteDialog" icon="sap-icon://settings" type="Default"/>
+                    <Button text="{i18n>handlingUnitDeleteRow}" press="onDeleteRow" icon="sap-icon://delete" type="Negative"/>
+                    <Button text="{i18n>handlingUnitSendDelivery}" press="onSendDelivery" icon="sap-icon://upload" type="Emphasized"/>
+                </VBox>
+            </Panel>
+        </content>
+    </Page>
+
+    <Dialog id="idSelectBoxPalletDialog" title="{i18n>handlingUnitSelectionTitle}" afterClose="onCloseSelectionDialog">
+        <content>
+            <HBox justifyContent="SpaceAround" width="100%">
+                <VBox width="45%">
+                    <Title text="{i18n>handlingUnitPalette}" level="H3"/>
+                    <List id="idPalletList" mode="SingleSelectMaster" items="{modelName>/Pallets}" selectionChange="onSelectPallet">
+                        <StandardListItem title="{modelName>Name}" />
+                    </List>
+                </VBox>
+
+                <VBox width="45%">
+                    <Title text="{i18n>handlingUnitBox}" level="H3"/>
+                    <List id="idBoxList" mode="SingleSelectMaster" items="{modelName>/Boxes}" selectionChange="onSelectBox">
+                        <StandardListItem title="{modelName>Name}" />
+                    </List>
+                </VBox>
+            </HBox>
+        </content>
+        <beginButton>
+            <Button text="{i18n>handlingUnitOk}" press="onConfirmSelection"/>
+        </beginButton>
+        <endButton>
+            <Button text="{i18n>handlingUnitCancel}" press="onCloseSelectionDialog"/>
+        </endButton>
+    </Dialog>
+
+    <Dialog id="idManagePalletteDialog" title="{i18n>handlingUnitManageTitle}" class="customDialog" afterClose="onCloseManagePalletteDialog">
+        <content>
+            <VBox>
+                <List id="idAllPalletsList" mode="None" items="{modelName>/AllPalettes}">
+                    <CustomListItem>
+                        <HBox justifyContent="SpaceBetween" alignItems="Center">
+                            <Text text="{modelName>Name}" class="sapUiSmallMargin"/>
+                            <HBox>
+                                <Button icon="sap-icon://less" press="onDecreasePallette"/>
+                                <Text text="{modelName>SelectedQuantity}" class="sapUiSmallMargin"/>
+                                <Button icon="sap-icon://add" press="onIncreasePallette"/>
+                            </HBox>
+                        </HBox>
+                    </CustomListItem>
+                </List>
+            </VBox>
+        </content>
+        <beginButton>
+            <Button text="{i18n>handlingUnitOk}" press="onConfirmManagePallette"/>
+        </beginButton>
+        <endButton>
+            <Button text="{i18n>handlingUnitCancel}" press="onCloseManagePalletteDialog"/>
+        </endButton>
+    </Dialog>
+
+</mvc:View>

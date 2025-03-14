@@ -1,0 +1,79 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core" controllerName="logistic-flow.controller.BP-DoJour">
+
+    <Page title="{i18n>bpDoJourTitle}" showNavButton="true" navButtonPress="onNavBack" enableScrolling="false">
+
+        <content>
+            <Panel class="bpPanel">
+                <VBox>
+
+                    <RadioButtonGroup select="onSelectionChange" columns="2">
+                        <buttons>
+                            <RadioButton text="{i18n>bpDoJourRadioBP}" selected="true" />
+                            <RadioButton text="{i18n>bpDoJourRadioRefCommande}" />
+                        </buttons>
+                    </RadioButtonGroup>
+
+                    <SearchField id="bpSearchField" width="100%" placeholder="{i18n>bpDoJourSearchPlaceholder}" liveChange="onSearch" />
+
+                    <!-- Barra degli strumenti con tre pulsanti di sorting -->
+                    <Toolbar class="toolbarDojur">
+                        <Button text="{i18n>bpDoJourFilterByDate}" icon="sap-icon://calendar" press="onOpenDateFilter" />
+
+                        <ToolbarSpacer />
+                        <Button text="{i18n>bpDoJourSortAsc}" icon="sap-icon://sort-ascending" press="onSortAsc" />
+                        <Button text="{i18n>bpDoJourSortDesc}" icon="sap-icon://sort-descending" press="onSortDesc" />
+                        <Button icon="sap-icon://undo" press="onSortReset" />
+                    </Toolbar>
+
+                    <Table id="bpTable" items="{/BPRechercheData}" class="borderedTable scrollableTable">
+                        <columns>
+                            <Column width="5em">
+                                <Text text="{i18n>bpDoJourTableDate}" />
+                            </Column>
+                            <Column width="3em">
+                                <Text text="{i18n>bpDoJourTableBP}" />
+                            </Column>
+                            <Column width="15em">
+                                <Text text="{i18n>bpDoJourTableNomClient}" />
+                            </Column>
+                            <Column width="5em">
+                                <Text text="{i18n>bpDoJourTableCodeClient}" />
+                            </Column>
+                        </columns>
+
+                        <items>
+                            <ColumnListItem type="Active" press="onRowSelect">
+                                <cells>
+                                    <Text text="{date}" />
+                                    <Text text="{BP}" />
+                                    <Text text="{NomClient}" />
+                                    <Text text="{CodeClient}" />
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+
+                    <HBox class="buttonContainerWithGap" width="100%" justifyContent="Center" alignItems="Center">
+                        <Button text="{i18n>bpDoJourButtonAnnuler}" type="Default" press="onCancel" class="bigButton annulerButton"/>
+                        <Button text="{i18n>bpDoJourButtonValider}" type="Emphasized" press="onValidate" class="bigButton validerButton"/>
+                    </HBox>
+
+                </VBox>
+            </Panel>
+        </content>
+    </Page>
+
+    <!-- Popover per selezione delle date -->
+    <Popover id="dateFilterPopover" placement="Bottom" title="{i18n>bpDoJourPopoverTitle}" beforeOpen="onBeforeOpenDateFilter">
+        <VBox class="dateFilterContainer" alignItems="Center" justifyContent="Center" width="250px">
+            <VBox alignItems="Center" justifyContent="Center" width="100%">
+                <DatePicker id="fromDatePicker" width="90%" displayFormat="dd MM yyyy" valueFormat="yyyy-MM-dd" placeholder="{i18n>bpDoJourDatePlaceholder}" />
+                <DatePicker id="toDatePicker" width="90%" displayFormat="dd MM yyyy" valueFormat="yyyy-MM-dd" placeholder="{i18n>bpDoJourDatePlaceholder}" />
+            </VBox>
+            <Button text="{i18n>bpDoJourApplyButton}" type="Emphasized" press="onApplyDateFilter" class="applyButton"/>
+        </VBox>
+    </Popover>
+
+</mvc:View>

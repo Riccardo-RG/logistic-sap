@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Logistic Flow</title>
+
+    <!-- SAPUI5 Bootstrap -->
+    <script
+      id="sap-ui-bootstrap"
+      src="https://sapui5.hana.ondemand.com/1.96/resources/sap-ui-core.js"
+      data-sap-ui-libs="sap.m,sap.ui.core,sap.ui.layout"
+      data-sap-ui-theme="sap_horizon"
+      data-sap-ui-async="true"
+      data-sap-ui-preload="async"
+      data-sap-ui-resourceroots='{"logistic-flow": "./"}'
+      data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
+    ></script>
+
+    <!-- (Facoltativo) Live Reload -->
+    <script>
+      (function () {
+        var script = document.createElement("script");
+        script.src = "http://localhost:8081/livereload.js";
+        script.onerror = function () {
+          console.warn("Live Reload non disponibile. Ignorando...");
+        };
+        document.head.appendChild(script);
+      })();
+    </script>
+
+    <!-- Redirect automatico a MainView se l'URL è vuoto -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (
+          !window.location.hash ||
+          window.location.pathname.endsWith("index.html")
+        ) {
+          window.history.replaceState(
+            {},
+            document.title,
+            window.location.origin + "/#/MainView"
+          );
+        }
+      });
+    </script>
+  </head>
+
+  <body class="sapUiBody">
+    <!-- Container per caricare il componente SAPUI5 -->
+    <div
+      data-sap-ui-component
+      data-name="logistic-flow"
+      data-id="container"
+      data-sap-ui-async="true"
+      data-settings='{"manifestFirst": true}'
+    ></div>
+  </body>
+</html>

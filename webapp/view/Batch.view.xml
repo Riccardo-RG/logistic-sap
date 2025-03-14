@@ -1,0 +1,65 @@
+<mvc:View controllerName="logistic-flow.controller.Batch"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <Page title="{i18n>batchTitle}" showNavButton="true" navButtonPress="onNavBack" enableScrolling="false">
+        <content>
+            <Panel class="bpPanel">
+                <core:Fragment fragmentName="logistic-flow.fragment.IconTabBar" type="XML"/>
+                <VBox>
+                    <Title text="{i18n>batchSaisie}" level="H2" class="sapUiSmallMarginTop"/>
+                    <FlexBox direction="Column" class="borderedBox" alignItems="Stretch" justifyContent="Start">
+                        <!-- Dati di display -->
+                        <HBox alignItems="Center" class="sapUiMediumMarginBottom">
+                            <Label text="{i18n>batchProduit}" width="150px" class="boldLabel"/>
+                            <Text id="produitText" text="GCI BLANC S9016 VB40 IHB"/>
+                        </HBox>
+                        <HBox alignItems="Center" class="sapUiMediumMarginBottom">
+                            <Label text="{i18n>batchLiner}" width="150px" class="boldLabel"/>
+                            <Text id="linerText" text="OUI"/>
+                        </HBox>
+                        <HBox alignItems="Center" class="sapUiMediumMarginBottom">
+                            <Label text="{i18n>batchUC}" width="150px" class="boldLabel"/>
+                            <Text id="ucText" text="2 x SEAU EXPORT 25KG"/>
+                        </HBox>
+                        <HBox alignItems="Center" class="sapUiMediumMarginBottom">
+                            <Label text="{i18n>batchQtPrepare}" width="150px" class="boldLabel"/>
+                            <Text id="qtPrepareText" text="50.000"/>
+                        </HBox>
+                        <HBox alignItems="Center" class="sapUiMediumMarginBottom">
+                            <Label text="{i18n>batchQtDejaPrepare}" width="150px" class="boldLabel"/>
+                            <Text id="qtDejaPrepareText" text="49.500"/>
+                        </HBox>
+
+                        <!-- Campi OData -->
+                        <HBox alignItems="Center" class="sapUiSmallMarginBottom">
+                            <Label text="{i18n>batchConditionnement}" width="150px" class="boldLabel"/>
+                            <Input id="tipoImballo" width="60%"/>
+                        </HBox>
+                        <HBox alignItems="Center" class="sapUiSmallMarginBottom">
+                            <Label text="{i18n>batchQuantite}" width="150px" class="boldLabel"/>
+                            <Input id="qtPick" width="60%"/>
+                        </HBox>
+                        <HBox alignItems="Center" class="sapUiSmallMarginBottom">
+                            <Label text="{i18n>batchLotPropose}" width="150px" class="boldLabel"/>
+                            <Input id="batch" width="60%"/>
+                        </HBox>
+
+                        <HBox alignItems="Center" class="sapUiSmallMarginBottom" justifyContent="SpaceAround">
+                            <Label text="{i18n>batchNbCollis}" width="100px" class="boldLabel"/>
+                            <Label id="nbCollis" text="1"/>
+                            <Label text="{i18n>batchNbBP}" width="100px" class="boldLabel"/>
+                            <Label id="nbBP" text="5556493"/>
+                        </HBox>
+                    </FlexBox>
+
+                    <HBox alignItems="Center" justifyContent="Center" class="sapUiMediumMarginTop">
+                        <Button text="{i18n>batchContinuer}" press="onValidate" class="sapUiSizeCozy bigButton"/>
+                        <Button text="{i18n>batchFinTraitement}" type="Emphasized" press="onSubmit" class="sapUiSizeCozy bigButton"/>
+                    </HBox>
+                </VBox>
+            </Panel>
+        </content>
+    </Page>
+</mvc:View>

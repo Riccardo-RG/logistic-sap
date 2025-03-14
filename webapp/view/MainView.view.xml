@@ -1,0 +1,31 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" controllerName="logistic-flow.controller.MainView">
+
+    <Page title="{i18n>mainViewTitle}" class="bpPreparationPage">
+
+        <content>
+            <Panel>
+                <VBox>
+                    <!-- Sezione per input Dossier e Option -->
+                    <Label text="{i18n>mainViewSelection}" class="selectionHeader"/>
+                    <HBox class="inputContainer">
+                        <Label text="{i18n>mainViewDossier}" class="inputLabel"/>
+                        <Input id="dossierInput" value="830"/>
+                        <Label text="{i18n>mainViewOption}" class="inputLabel"/>
+                        <Input id="optionInput" value="99"/>
+                    </HBox>
+
+                    <!-- Lista delle opzioni -->
+                    <List id="optionsList" mode="None" class="optionList">
+                        <StandardListItem title="{i18n>mainViewExpedition}" type="Inactive" class="boldHeader"/>
+                        <StandardListItem title="{i18n>mainViewPreparationBP}" type="Navigation" press="onNavigateBPPreparation" class="optionItem"/>
+                        <StandardListItem title="{i18n>mainViewStock}" type="Inactive" class="boldHeader"/>
+                        <StandardListItem title="{i18n>mainViewInfoProduit}" type="Navigation" press="onNavigateInfoProduit" class="optionItem"/>
+                        <StandardListItem title="{i18n>mainViewInterrogationLot}" type="Navigation" press="onSelectOption" class="optionItem"/>
+                        <StandardListItem title="{i18n>mainViewSaisieInventaire}" type="Navigation" press="onSelectOption" class="optionItem"/>
+                    </List>
+                </VBox>
+            </Panel>
+        </content>
+    </Page>
+</mvc:View>

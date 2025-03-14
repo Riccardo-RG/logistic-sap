@@ -1,0 +1,17 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" displayBlock="true">
+    <App id="app">
+        <NavContainer id="navContainer">
+            <pages>
+                <mvc:XMLView id="MainView" viewName="logistic-flow.view.MainView"/>
+                <mvc:XMLView id="BP-Preparation" viewName="logistic-flow.view.BP-Preparation"/>
+                <mvc:XMLView id="BP-RechercheProduit" viewName="logistic-flow.view.BP-RechercheProduit"/>
+                <mvc:XMLView id="BP-DoJour" viewName="logistic-flow.view.BP-DoJour"/>
+                <mvc:XMLView id="DetailDuClient" viewName="logistic-flow.view.DetailDuClient"/>
+                <mvc:XMLView id="PrepareProduit" viewName="logistic-flow.view.PrepareProduit"/>
+                <mvc:XMLView id="Batch" viewName="logistic-flow.view.Batch"/>
+                <mvc:XMLView id="InformationsProduit" viewName="logistic-flow.view.InformationsProduit"/>
+            </pages>
+        </NavContainer>
+    </App>
+</mvc:View>

@@ -1,0 +1,79 @@
+<mvc:View controllerName="logistic-flow.controller.BP-Preparation"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <Page id="pageBPPreparation" title="{i18n>bpPreparationTitle}" class="bpPreparationPage" showNavButton="true" navButtonPress=".onNavBack">
+        <content>
+            <VBox class="tabContent">
+                <core:Fragment fragmentName="logistic-flow.fragment.IconTabBar" type="XML"/>
+
+                <HBox class="bpSearchContainer" justifyContent="Center">
+                    <HBox class="inputPair">
+                        <Label text="{i18n>depotLabel}" class="boldLabel"/>
+                        <Input id="depotInput" value="1" width="50px"/>
+                    </HBox>
+                    <HBox class="inputPair">
+                        <Label text="{i18n>bpLabel}" class="boldLabel"/>
+                        <Input id="bpInput" placeholder="{i18n>bpPlaceholder}" liveChange="onSearchBP" width="60px" type="Number"/>
+                    </HBox>
+                </HBox>
+
+                <HBox class="bpButtons" justifyContent="SpaceAround">
+                    <Button id="idBpAutoButton" text="{i18n>bpAutoButton}" press="onToggleFilter" class="orderButton"/>
+                    <Button text="{i18n>bpCompleteListButton}" press="onTestF4Press" class="orderButton"/>
+                </HBox>
+
+                <VBox class="tabContent">
+                    <Table id="bpTablePreparation" class="scrollableTable" mode="SingleSelectMaster" items="{BPData>/filteredResults}" selectionChange=".onBPSelected">
+                        <columns>
+                            <Column>
+                                <header>
+                                    <Text text="{i18n>bpTableIdDelivery}"/>
+                                </header>
+                            </Column>
+                            <Column>
+                                <header>
+                                    <Text text="{i18n>bpTableShipTo}" />
+                                </header>
+                            </Column>
+                            <Column>
+                                <header>
+                                    <Text text="{i18n>bpTableClient}" />
+                                </header>
+                            </Column>
+                            <Column>
+                                <header>
+                                    <Text text="{i18n>bpTableCodTrasp}" />
+                                </header>
+                            </Column>
+                            <Column>
+                                <header>
+                                    <Text text="{i18n>bpTableNomeTrasp}" />
+                                </header>
+                            </Column>
+                        </columns>
+
+                        <items>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="{BPData>IdDelivery}" />
+                                    <Text text="{BPData>ShipTo}" />
+                                    <Text text="{BPData>NomeCliente}" />
+                                    <Text text="{BPData>CodTrasp}" />
+                                    <Text text="{BPData>NomeTrasp}" />
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </VBox>
+
+                <HBox class="bpButtons" justifyContent="SpaceBetween">
+                    <Button id="idCustomerDetail" text="{i18n>bpInfoClientButton}" press="onDetailDuClient" visible="false" class="orderButton"/>
+                    <HBox width="100%"></HBox>
+                    <Button id="idSUIVANTButton" text="{i18n>bpNextButton}" press="onNextBP" enabled="false" class="orderButton"/>
+                </HBox>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

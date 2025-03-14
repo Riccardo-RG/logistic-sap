@@ -1,0 +1,302 @@
+{
+  "BPData": [
+    {
+      "BPNumber": "10001",
+      "CodeClient": "4321",
+      "Client": "LITEBOAT SARL",
+      "Transporter": "123",
+      "DescriptionTransporteur": "Test description trasportrteur longue  rasportrteur longue"
+    },
+    {
+      "BPNumber": "10003",
+      "CodeClient": "4321",
+      "Client": "BLUETEK",
+      "Transporter": "3455",
+      "DescriptionTransporteur": "Test description trasportrteur longue  rasportrteur longue"
+    },
+    {
+      "BPNumber": "10004",
+      "CodeClient": "1321",
+      "Client": "LITEBOAT SARL",
+      "Transporter": "566",
+      "DescriptionTransporteur": "Test description trasportrteur longue  rasportrteur longue"
+    },
+    {
+      "BPNumber": "10005",
+      "CodeClient": "3242",
+      "Client": "ALFAKEM LTD",
+      "Transporter": "345",
+      "DescriptionTransporteur": "Test description trasportrteur longue  rasportrteur longue"
+    },
+    {
+      "BPNumber": "10004",
+      "CodeClient": "1321",
+      "Client": "LITEBOAT SARL",
+      "Transporter": "566",
+      "DescriptionTransporteur": "Test description trasportrteur longue  rasportrteur longue"
+    },
+    {
+      "BPNumber": "10005",
+      "CodeClient": "3242",
+      "Client": "ALFAKEM LTD",
+      "Transporter": "345",
+      "DescriptionTransporteur": "Test description trasportrteur longue  rasportrteur longue"
+    },
+    {
+      "BPNumber": "10004",
+      "CodeClient": "1321",
+      "Client": "LITEBOAT SARL",
+      "Transporter": "566",
+      "DescriptionTransporteur": "Test description trasportrteur longue  rasportrteur longue"
+    },
+    {
+      "BPNumber": "10005",
+      "CodeClient": "3242",
+      "Client": "ALFAKEM LTD",
+      "Transporter": "345",
+      "DescriptionTransporteur": "Test description trasportrteur longue  rasportrteur longue"
+    },
+    {
+      "BPNumber": "82134",
+      "CodeClient": "82134",
+      "Client": "MILAR Sp",
+      "Transporter": "222",
+      "DescriptionTransporteur": "Test description trasportrteur longue  rasportrteur longue"
+    },
+    {
+      "BPNumber": "10002",
+      "CodeClient": "3421",
+      "Client": "MILAR Sp",
+      "Transporter": "123",
+      "DescriptionTransporteur": "Test description trasportrteur longue  rasportrteur longue"
+    },
+    {
+      "BPNumber": "1421",
+      "CodeClient": "10003",
+      "Client": "ALFAKEM LTD",
+      "Transporter": "567",
+      "DescriptionTransporteur": "Test description trasportrteur longue  rasportrteur longue"
+    },
+    {
+      "BPNumber": "2304",
+      "CodeClient": "10004",
+      "Client": "TEST CUSTOMER LUNGHEZZA NAME TEST ",
+      "Transporter": "134",
+      "DescriptionTransporteur": "Test description trasportrteur longue  rasportrteur longue"
+    },
+    {
+      "BPNumber": "10005",
+      "CodeClient": "1323",
+      "Client": "CLIENT D",
+      "Transporter": "345",
+      "DescriptionTransporteur": "Test description trasportrteur longue  rasportrteur longue"
+    }
+  ],
+
+  "BPRechercheData": [
+    {
+      "BP": "10879",
+      "CodeClient": "12345",
+      "NomClient": "GCI GRIS S7037 VM16/D IHBE",
+      "Status": "valid",
+      "date": "02 01 2023",
+      "avaiable": true,
+      "pr": false
+    },
+    {
+      "BP": "11148",
+      "CodeClient": "12345",
+      "NomClient": "GCI BEIGE S1013 VM16/D IHBE",
+      "Status": "valid",
+      "date": "03 01 2023",
+      "avaiable": false,
+      "pr": false
+    },
+    {
+      "BP": "11152",
+      "CodeClient": "12345",
+      "NomClient": "GCVN ORANGE X20000 VB40 IH",
+      "Status": "valid",
+      "date": "05 01 2023",
+      "avaiable": false,
+      "pr": false
+    },
+    {
+      "BP": "17969",
+      "CodeClient": "12345",
+      "NomClient": "GCI NOIR S9005 NC VB40 IHBE",
+      "Status": "valid",
+      "date": "03 01 2023",
+      "avaiable": false,
+      "pr": false
+    },
+    {
+      "BP": "18136",
+      "CodeClient": "12345",
+      "NomClient": "GCI VERT X50000 VM13 IHBE",
+      "Status": "valid",
+      "date": "01 01 2023",
+      "avaiable": true,
+      "pr": true
+    },
+    {
+      "BP": "25101",
+      "CodeClient": "12345",
+      "NomClient": "GCI VERT S7035 VM16 IHBE",
+      "Status": "valid",
+      "date": "02 01 2023",
+      "avaiable": true,
+      "pr": true
+    },
+    {
+      "BP": "23734",
+      "CodeClient": "12345",
+      "NomClient": "GCI BLANC S9016 VB40 IHBE",
+      "Status": "valid",
+      "date": "01 01 2023",
+      "avaiable": true,
+      "pr": true
+    },
+    {
+      "BP": "25783",
+      "CodeClient": "12345",
+      "NomClient": "GCI VERT S65155 VM16/D IH",
+      "Status": "valid",
+      "date": "01 01 2023",
+      "avaiable": true,
+      "pr": true
+    },
+    {
+      "BP": "26094",
+      "CodeClient": "12345",
+      "NomClient": "GCI ORANGE S2003C VM16/D IH",
+      "Status": "invalid",
+      "date": "01 01 2023",
+      "avaiable": true,
+      "pr": true
+    },
+    {
+      "BP": "27193",
+      "CodeClient": "12345",
+      "NomClient": "GCI IVOIRE XPI 1015 VM16/D",
+      "Status": "invalid",
+      "date": "01 01 2023",
+      "avaiable": true,
+      "pr": true
+    },
+    {
+      "BP": "28110",
+      "CodeClient": "12345",
+      "NomClient": "GCI GRIS S7035 VB40 IHBE",
+      "Status": "valid",
+      "date": "01 01 2023"
+    },
+    {
+      "BP": "10879",
+      "CodeClient": "12345",
+      "NomClient": "GCI GRIS S7037 VM16/D IHBE",
+      "Status": "valid",
+      "date": "01 01 2023"
+    },
+    {
+      "BP": "11148",
+      "CodeClient": "12345",
+      "NomClient": "GCI BEIGE S1013 VM16/D IHBE",
+      "Status": "valid",
+      "date": "01 01 2023"
+    },
+    {
+      "BP": "11152",
+      "CodeClient": "12345",
+      "NomClient": "GCVN ORANGE X20000 VB40 IH ANGE X20000 VB40 ANGE X20000 VB40 ANGE X20000 VB40 ANGE X20000 VB40 GCVN ORANGE X20000 VB40 IH ANGE X20000 VB40 ANGE X20000 VB40 ANGE X20000 VB40 ANGE X20000 VB40 GCVN ORANGE X20000 VB40 IH ANGE X20000 VB40 ANGE X20000 VB40 ANGE X20000 VB40 ANGE X20000 VB40GCVN ORANGE X20000 VB40 IH ANGE X20000 VB40 ANGE X20000 VB40 ANGE X20000 VB40 ANGE X20000 VB40",
+      "Status": "valid",
+      "date": "01 01 2023"
+    },
+    {
+      "BP": "17969",
+      "CodeClient": "12345",
+      "NomClient": "GCI NOIR S9005 NC VB40 IHBE",
+      "Status": "valid",
+      "date": "01 01 2023"
+    },
+    {
+      "BP": "18136",
+      "CodeClient": "12345",
+      "NomClient": "GCI VERT X50000 VM13 IHBE",
+      "Status": "valid",
+      "date": "01 01 2023"
+    }
+  ],
+
+  "AllPalettes": [{ "Name": "3x3" }, { "Name": "5x5" }, { "Name": "Box" }],
+
+  "Boxes": [
+    { "Name": "Box_1" },
+    { "Name": "Box_2" },
+    { "Name": "Box_3" },
+    { "Name": "Box_4" }
+  ],
+
+  "Pallets": [
+    { "Name": "3x3 id: 1" },
+    { "Name": "5x5 id: 2" },
+    { "Name": "3x3 id: 3" },
+    { "Name": "5x5 id: 4" }
+  ],
+  "Produits": [
+    {
+      "Produit": "Produit A",
+      "PaletteId": "id: 1",
+      "Palette": "3x3",
+      "Box": null,
+      "Nombre": 8,
+      "Condi": "Type_3",
+      "Qte": 80
+    },
+    {
+      "Produit": "Produit B",
+      "PaletteId": null,
+      "Palette": null,
+      "Box": "Box",
+      "Nombre": 10,
+      "Condi": "Type_1",
+      "Qte": 100
+    },
+    {
+      "Produit": "Produit C",
+      "PaletteId": "id: 2",
+      "Palette": "3x3",
+      "Box": "Box",
+      "Nombre": 5,
+      "Condi": "Type_2",
+      "Qte": 50
+    },
+    {
+      "Produit": "Produit D",
+      "PaletteId": null,
+      "Palette": null,
+      "Box": null,
+      "Nombre": 8,
+      "Condi": "Type_3",
+      "Qte": 80
+    },
+    {
+      "Produit": "Produit E",
+      "PaletteId": "id: 1",
+      "Palette": "5x5",
+      "Box": "Box",
+      "Nombre": 8,
+      "Condi": "Type_3",
+      "Qte": 80
+    },
+    {
+      "Produit": "Produit F",
+      "PaletteId": "2",
+      "Palette": "id: 5x5",
+      "Box": "Box",
+      "Nombre": 6,
+      "Condi": "Type_1",
+      "Qte": 60
+    }
+  ]
+}

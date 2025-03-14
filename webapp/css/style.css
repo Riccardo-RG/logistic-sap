@@ -1,0 +1,362 @@
+/* MAIN VIEW STYLESHEET */
+
+.boldLabel {
+  font-weight: bold;
+  color: #333;
+}
+
+.fieldPair {
+  margin-bottom: 30px;
+}
+
+.marginRight {
+  margin-right: 50px;
+}
+
+/* 🔹 Se l'icona SVG viene colorata automaticamente */
+.customIconTabBar .sapMITBFilterIcon .sapUiIcon {
+  transition: fill 0.3s ease;
+  color: #333;
+}
+
+/* 🔹 Forza la dimensione delle icone SVG nei tab */
+.customIconTabBar .sapMITBFilterIcon {
+  width: 42px !important;
+  height: 42px !important;
+  margin-top: -16px;
+}
+
+/* 🔹 Riduzione dell'altezza della testata della tab bar */
+.customIconTabBar .sapMITBHead {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important; /* centra verticalmente */
+  gap: 2.3rem !important; /* Aumenta il valore se serve più spazio */
+  height: 32px !important;
+  min-height: 55px !important;
+}
+
+/* 🔹 Riduzione dell'altezza dei tab */
+.customIconTabBar .sapMITBFilter {
+  margin: 0 30px !important; /* Aumenta il valore per più distanza */
+  height: 32px !important;
+  line-height: 32px !important;
+}
+
+.customIconTabBar
+  .sapMITBFilter.sapMITBFilterSelected
+  .sapMITBFilterIcon
+  .sapUiIcon {
+  color: white !important;
+}
+
+.borderedBox {
+  border: 1px solid #9b9898;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+.sapMPage .sapMIBar.sapMHeader-CTX {
+  background-color: #5e7dad;
+}
+
+.sapMPage .sapMBar .sapMBarLeft .sapMBtnInner {
+  background-color: #2c3e50;
+  color: white;
+  border-radius: 5px; /* Angoli arrotondati */
+  border-color: #9b9898;
+}
+
+.sapUiBody {
+  background-color: #f5f5f5; /* Example background color */
+}
+.selectionHeader {
+  color: #5e7dad;
+  padding: 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Stile per la lista delle opzioni */
+.optionList {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+}
+
+/* Stile per gli elementi della lista */
+.optionItem {
+  padding: 10px;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Cambia colore al passaggio del mouse */
+.optionItem:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.sapMPanelContent {
+  padding-bottom: 100%;
+  background-color: #d9d9d9;
+}
+
+/* BP-PREPARATION VIEW STYLESHEET */
+
+.toolbarDojur {
+  background: none !important;
+  background-color: transparent !important;
+  margin-bottom: 15px;
+  margin-top: 2px;
+}
+/* Stile generale della pagina */
+.bpPreparationPage,
+.mainPage {
+  background-color: #d9d9d9;
+}
+
+.sapMBtnBack {
+  margin-right: 100px; /* imposta il margine a tuo piacere */
+}
+
+/* Stile per i Panel */
+.bpPanel {
+  background-color: white;
+  border-radius: 8px;
+  padding: 0 5px 5px 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenitore degli input */
+.inputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+}
+
+/* Stile per le etichette "Dossier" e "Option" */
+.inputLabel {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Stile per gli input */
+.sapMInput {
+  min-width: 80px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Stile per la lista delle opzioni */
+.optionList {
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: white;
+  padding: 5px;
+}
+
+/* Intestazioni delle liste (EXPEDITION, STOCK) */
+.boldHeader {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+  background-color: #e0e0e0;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+/* Stile per gli elementi della lista */
+.optionItem {
+  padding: 10px;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Cambia colore al passaggio del mouse */
+.optionItem:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+/* Stile per l'oggetto selezionato */
+.sapMLIBSelected {
+  background-color: #007aff;
+  color: white;
+}
+
+.bpSearchContainer {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center; /* Centra gli elementi orizzontalmente */
+  align-items: center;
+  gap: 80px; /* Spazio tra gli elementi */
+  width: 100%;
+}
+
+.inputPair {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Distanza tra label e input */
+  justify-content: center; /* Centra la coppia Label + Input */
+}
+
+.bpButtons {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.scrollableTable {
+  overflow-x: auto;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+}
+
+.tabContent {
+  padding: 5px;
+}
+.scrollableTable table {
+  width: 100% !important; /* La tabella riempie tutto il contenitore */
+  min-width: 800px; /* Sotto 800px di schermo -> scatta lo scroll orizz. */
+}
+
+.scrollableTable td:nth-child(4),
+.scrollableTable td:nth-child(5) {
+  max-width: 300px;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow: visible;
+}
+
+.orderButton .sapMBtnInner {
+  width: 110px;
+  color: black;
+  border-radius: 0;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+.orderButton.active .sapMBtnInner {
+  background-color: #5e7dad !important;
+  color: white !important;
+  border-color: #2c3e50 !important;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+}
+
+.sapUiRespGrid {
+  min-height: 700px;
+  border-radius: 8px;
+  padding: 0 15px 5px 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* BP-RECHERCHE VIEW STYLESHEET */
+.greenRow,
+.greenRow .sapMListTblCell {
+  background-color: #dff0d8 !important; /* Verde chiaro */
+}
+
+.redRow,
+.redRow .sapMListTblCell {
+  background-color: #f2dede !important; /* Rosso chiaro */
+}
+
+/* Center the buttons in the footer */
+
+.buttonContainerWithGap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* Spazio di 10px tra i bottoni */
+  margin-top: 10px;
+}
+
+button.sapMBtn.bigButton {
+  font-size: 18px !important;
+  width: 210px !important;
+  height: 50px !important;
+  line-height: 50px !important;
+  padding: 0 20px !important;
+  text-align: center !important;
+}
+
+.marginLeft10 {
+  margin-left: 10px;
+}
+
+/* Imposta un'altezza massima e rende la tabella scrollabile */
+.scrollableTable {
+  overflow-x: auto;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  max-height: 450px;
+  height: auto;
+}
+
+.sapMBtn.bigButton,
+.sapMBtn.bigButton .sapMBtnInner {
+  font-size: 18px !important;
+  width: 220px !important;
+  height: 60px !important;
+  line-height: 50px !important;
+  padding: 0 20px !important;
+  text-align: center !important;
+  min-width: 150px !important;
+  min-height: 50px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.greenRow,
+.greenRow .sapMListTblCell {
+  background-color: #eaf7e0 !important;
+}
+
+.redRow,
+.redRow .sapMListTblCell {
+  background-color: #f4d6d8 !important;
+}
+
+.borderedTable {
+  border: 2px solid #5e7dad; /* Bordo nero attorno alla tabella */
+  border-collapse: collapse; /* Unisce i bordi delle celle */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra alla tabella */
+  min-height: 500px;
+}
+
+.borderedTable .sapMListTblRow {
+  border-bottom: 1px solid #5e7dad; /* Bordo nero tra le righe */
+}
+
+.borderedTable .sapMListTblCell {
+  border-right: 1px solid #5e7dad; /* Bordo nero tra le celle */
+  border-bottom: 1px solid #5e7dad; /* Bordo nero tra le righe */
+}
+
+.borderedTable .sapMListTblCell:last-child {
+  border-right: none; /* Rimuove il bordo destro dall'ultima cella */
+}
+
+.borderedTable .sapMListTblRow:last-child .sapMListTblCell {
+  border-bottom: none; /* Rimuove il bordo inferiore dall'ultima riga */
+}
+
+.selectedRow {
+  border: 2px solid #5e7dad !important; /* Colore blu per evidenziare */
+  border-radius: 5px; /* Angoli arrotondati */
+  background-color: #e8edf7 !important; /* Leggera evidenziazione */
+}
+
+/* handling section */
